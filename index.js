@@ -27,11 +27,11 @@ module.exports = function (options) {
 
     var str = lessFile.contents.toString('utf8');
 
-    var opts = {};
+    var opts = options || {};
 
-    if (typeof options === 'function') {
-      opts = options.apply(this, arguments);
-    }
+    //if (typeof options === 'function') {
+      //opts = options.apply(this, arguments);
+    //}
 
     // Mixes in default options
     opts = defaults(
